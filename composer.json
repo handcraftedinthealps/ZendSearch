@@ -17,5 +17,10 @@
     },
     "replace": {
         "zendframework/zendsearch": "self.version"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
     }
 }
