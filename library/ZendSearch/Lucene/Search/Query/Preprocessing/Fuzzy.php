@@ -17,7 +17,7 @@ use ZendSearch\Lucene\Search;
 use ZendSearch\Lucene\Search\Exception\QueryParserException;
 use ZendSearch\Lucene\Search\Highlighter\HighlighterInterface as Highlighter;
 use ZendSearch\Lucene\Search\Query;
-use Zend\Stdlib\ErrorHandler;
+use ZendSearch\Stdlib\ErrorHandler;
 
 /**
  * It's an internal abstract class intended to finalize ase a query processing after query parsing.
@@ -157,8 +157,8 @@ class Fuzzy extends AbstractPreprocessing
         // -------------------------------------
         // Recognize wildcard queries
 
-        /** 
-         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future 
+        /**
+         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future
          */
         ErrorHandler::start(E_WARNING);
         $result = preg_match('/\pL/u', 'a');
@@ -212,8 +212,8 @@ class Fuzzy extends AbstractPreprocessing
         // -------------------------------------
         // Recognize wildcard queries
 
-        /** 
-         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future 
+        /**
+         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future
          */
         ErrorHandler::start(E_WARNING);
         $result = preg_match('/\pL/u', 'a');
