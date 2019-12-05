@@ -1,8 +1,6 @@
 # ZendSearch component
 
-> ## UNMAINTAINED
->
-> This package is no longer maintained.
+This is a fork of [ZendSearch](https://github.com/zendframework/ZendSearch) without any dependencies.
 
 You can install using:
 
