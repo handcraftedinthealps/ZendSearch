@@ -7,18 +7,11 @@
         "zf2",
         "lucene"
     ],
-    "homepage": "http://packages.zendframework.com/",
     "autoload": {
         "psr-4": {
             "ZendSearch\\": "library/ZendSearch"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages.zendframework.com/"
-        }
-    ],
     "require": {
         "php": ">=5.3.3"
     },

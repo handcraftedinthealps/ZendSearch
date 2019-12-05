@@ -1,6 +1,6 @@
 # ZendSearch component
 
-This is a fork of [ZendSearch](https://github.com/zendframework/ZendSearch) without any dependencies.
+This is a fork of [ZendSearch](https://github.com/zendframework/ZendSearch) kept compatible with the latest PHP versions.
 
 You can install using:
 
