@@ -9,8 +9,8 @@
     ],
     "homepage": "http://packages.zendframework.com/",
     "autoload": {
-        "psr-0": {
-            "ZendSearch": "library/"
+        "psr-4": {
+            "ZendSearch\\": "library/ZendSearch"
         }
     },
     "repositories": [
