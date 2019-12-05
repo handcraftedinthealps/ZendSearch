@@ -1,1 +1,5 @@
 vendor/
+composer.lock
+tests/ZendSearch/Lucene/_files
+phpunit.phar
+phpunit.xml

@@ -13,7 +13,7 @@ namespace ZendSearch\Lucene\Storage\Directory;
 use ZendSearch\Lucene;
 use ZendSearch\Lucene\Storage\Directory;
 use ZendSearch\Lucene\Storage\File;
-use Zend\Stdlib\ErrorHandler;
+use ZendSearch\Stdlib\ErrorHandler;
 
 /**
  * FileSystem implementation of DirectoryInterface abstraction.

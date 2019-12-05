@@ -18,7 +18,7 @@ use ZendSearch\Lucene\Exception\RuntimeException;
 use ZendSearch\Lucene\Exception\UnsupportedMethodCallException;
 use ZendSearch\Lucene\Index;
 use ZendSearch\Lucene\Search\Highlighter\HighlighterInterface as Highlighter;
-use Zend\Stdlib\ErrorHandler;
+use ZendSearch\Stdlib\ErrorHandler;
 
 /**
  * @category   Zend
@@ -140,8 +140,8 @@ class Wildcard extends AbstractQuery
             );
         }
 
-        /** 
-         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future 
+        /**
+         * @todo check for PCRE unicode support may be performed through Zend_Environment in some future
          */
         ErrorHandler::start(E_WARNING);
         $result = preg_match('/\pL/u', 'a');
