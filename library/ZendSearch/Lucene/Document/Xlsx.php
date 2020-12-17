@@ -91,12 +91,17 @@ class Xlsx extends AbstractOpenXML
         }
 
         // Prevent php from loading remote resources
-        $loadEntities = libxml_disable_entity_loader(true);
+        $loadEntities = false;
+        if (\PHP_VERSION_ID < 80000 || \LIBXML_VERSION < 20900) {
+            $loadEntities = @libxml_disable_entity_loader(true);
+        }
 
         $relations = simplexml_load_string($relationsXml);
 
         // Restore entity loader state
-        libxml_disable_entity_loader($loadEntities);
+        if (\PHP_VERSION_ID < 80000 || \LIBXML_VERSION < 20900) {
+            libxml_disable_entity_loader($loadEntities);
+        }
 
         foreach ($relations->Relationship as $rel) {
             if ($rel["Type"] == AbstractOpenXML::SCHEMA_OFFICEDOCUMENT) {
