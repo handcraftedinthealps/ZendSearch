@@ -40,6 +40,7 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php-version }}
+                  extensions: 'iconv'
                   tools: 'composer'
 
             - name: Get composer cache directory
@@ -58,7 +59,7 @@ jobs:
             - name: Install dependencies
               run: |
                   composer validate --strict
-                  composer update ${{ matrix.composer-flags }}
+                  composer update -o ${{ matrix.composer-flags }}
 
             - name: Install phpunit
               run: |
