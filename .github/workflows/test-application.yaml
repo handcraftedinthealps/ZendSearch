@@ -43,7 +43,7 @@ jobs:
                   cd libiconv-1.11
                   ./configure --prefix=/usr/local/libiconv
                   make
-                  make install
+                  sudo make install
                   iconv --version
 
             - name: Install and configure PHP
