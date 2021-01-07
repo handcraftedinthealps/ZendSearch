@@ -36,6 +36,16 @@ jobs:
             - name: Checkout project
               uses: actions/checkout@v2
 
+            - name: Install gnu-libiconv
+              run: |
+                  wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.11.tar.gz
+                  tar -xvzf libiconv-1.11.tar.gz
+                  cd libiconv-1.11
+                  ./configure --prefix=/usr/local/libiconv
+                  make
+                  make install
+                  iconv --version
+
             - name: Install and configure PHP
               uses: shivammathur/setup-php@v2
               with:
@@ -58,10 +68,6 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  php -v
-                  php -m
-                  php -i
-                  iconv --version
                   composer validate --strict
                   composer update -o ${{ matrix.composer-flags }}
 

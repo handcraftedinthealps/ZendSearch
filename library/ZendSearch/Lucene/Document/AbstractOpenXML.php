@@ -67,14 +67,19 @@ abstract class AbstractOpenXML extends Document
         // Data holders
         $coreProperties = array();
 
-        // Prevent php from loading remote resources
-        $loadEntities = libxml_disable_entity_loader(true);
+
+        if (\PHP_VERSION_ID < 80000) {
+            // Prevent php from loading remote resources
+            $loadEntities = libxml_disable_entity_loader(true);
+        }
 
         // Read relations and search for core properties
         $relations = simplexml_load_string($package->getFromName("_rels/.rels"));
 
-        // Restore entity loader state
-        libxml_disable_entity_loader($loadEntities);
+        if (\PHP_VERSION_ID < 80000) {
+            // Restore entity loader state
+            libxml_disable_entity_loader($loadEntities);
+        }
 
         foreach ($relations->Relationship as $rel) {
             if ($rel["Type"] == self::SCHEMA_COREPROPERTIES) {
