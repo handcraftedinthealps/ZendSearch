@@ -61,6 +61,7 @@ jobs:
                   php -v
                   php -m
                   php -i
+                  iconv --version
                   composer validate --strict
                   composer update -o ${{ matrix.composer-flags }}
 
