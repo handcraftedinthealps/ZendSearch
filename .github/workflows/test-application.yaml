@@ -38,6 +38,7 @@ jobs:
 
             - name: Install gnu-libiconv
               run: |
+                  which iconv
                   wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.11.tar.gz
                   tar -xvzf libiconv-1.11.tar.gz
                   cd libiconv-1.11
