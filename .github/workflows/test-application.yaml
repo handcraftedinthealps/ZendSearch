@@ -12,9 +12,6 @@ jobs:
         name: "Run tests with php ${{ matrix.php-version }}"
         runs-on: ubuntu-latest
 
-        env:
-            SYMFONY_DEPRECATIONS_HELPER: weak
-
         strategy:
             fail-fast: false
             matrix:
