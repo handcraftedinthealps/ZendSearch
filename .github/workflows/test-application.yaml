@@ -58,6 +58,9 @@ jobs:
 
             - name: Install dependencies
               run: |
+                  php -v
+                  php -m
+                  php -i
                   composer validate --strict
                   composer update -o ${{ matrix.composer-flags }}
 
