@@ -69,6 +69,7 @@ jobs:
 
             - name: Install dependencies
               run: |
+                  php -r 'var_dump(ICONV_IMPL);'
                   composer validate --strict
                   composer update -o ${{ matrix.composer-flags }}
 

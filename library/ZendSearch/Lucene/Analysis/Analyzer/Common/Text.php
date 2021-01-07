@@ -37,6 +37,12 @@ class Text extends AbstractCommon
             return;
         }
 
+        echo ('----------------------------------------------------------') . PHP_EOL;
+        echo ('--------------------------ENCODING------------------------: ');
+        var_dump($this->_encoding);
+        echo ('---------------------------INPUT--------------------------: ') . PHP_EOL;
+        var_dump(json_encode($this->_input));
+
         // convert input into ascii
         if (PHP_OS != 'AIX') {
             $this->_input = iconv($this->_encoding, 'ASCII//TRANSLIT', $this->_input);
