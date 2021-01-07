@@ -10,7 +10,7 @@ on:
 jobs:
     php:
         name: "Run tests with php ${{ matrix.php-version }}"
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-16.04
 
         strategy:
             fail-fast: false
@@ -36,17 +36,6 @@ jobs:
             - name: Checkout project
               uses: actions/checkout@v2
 
-            - name: Install gnu-libiconv
-              run: |
-                  which iconv
-                  wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.11.tar.gz
-                  tar -xvzf libiconv-1.11.tar.gz
-                  cd libiconv-1.11
-                  ./configure --prefix=/usr/local/libiconv
-                  make
-                  sudo make install
-                  iconv --version
-
             - name: Install and configure PHP
               uses: shivammathur/setup-php@v2
               with:
@@ -69,7 +58,6 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  php -r 'var_dump(ICONV_IMPL);'
                   composer validate --strict
                   composer update -o ${{ matrix.composer-flags }}
 
@@ -79,4 +67,4 @@ jobs:
                   chmod +x phpunit.phar
 
             - name: Run tests
-              run: ./phpunit.phar -c tests/phpunit.xml.dist
+              run: ./phpunit.phar -c tests/phpunit.xml.dist --stop-on-error
