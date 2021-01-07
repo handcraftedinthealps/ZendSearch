@@ -1,7 +1,7 @@
 # ZendSearch component
 
 ![Latest Version](https://img.shields.io/github/v/tag/handcraftedinthealps/zendsearch.svg)
-![Travis Build](https://img.shields.io/travis/handcraftedinthealps/zendsearch.svg?label=travis)
+![Test Workflow](https://img.shields.io/github/workflow/status/handcraftedinthealps/zendsearch/Test%20application/master.svg?label=test-workflow)
 
 This is a fork of [ZendSearch](https://github.com/zendframework/ZendSearch) kept compatible with the latest PHP versions.
 
