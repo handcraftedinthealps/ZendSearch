@@ -67,4 +67,4 @@ jobs:
                   chmod +x phpunit.phar
 
             - name: Run tests
-              run: ./phpunit.phar -c tests/phpunit.xml.dist --stop-on-error
+              run: ./phpunit.phar -c tests/phpunit.xml.dist
