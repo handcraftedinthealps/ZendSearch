@@ -16,7 +16,7 @@ namespace ZendSearchTest\Lucene\Index;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class DictionaryLoaderTest extends \PHPUnit_Framework_TestCase
+class DictionaryLoaderTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {

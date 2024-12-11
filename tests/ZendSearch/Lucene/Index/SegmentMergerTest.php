@@ -19,7 +19,7 @@ use ZendSearch\Lucene\Index;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class SegmentMergerTest extends \PHPUnit_Framework_TestCase
+class SegmentMergerTest extends \PHPUnit\Framework\TestCase
 {
     public function testMerge()
     {

@@ -18,7 +18,7 @@ use ZendSearch\Lucene;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class MultiIndexTest extends \PHPUnit_Framework_TestCase
+class MultiIndexTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @covers ZendSearch\Lucene\MultiSearcher::find

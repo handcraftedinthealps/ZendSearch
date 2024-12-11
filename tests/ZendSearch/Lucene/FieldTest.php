@@ -18,7 +18,7 @@ use ZendSearch\Lucene\Document;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class FieldTest extends \PHPUnit_Framework_TestCase
+class FieldTest extends \PHPUnit\Framework\TestCase
 {
     public function testBinary()
     {

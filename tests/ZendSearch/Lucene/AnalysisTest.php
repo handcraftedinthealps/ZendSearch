@@ -24,7 +24,7 @@ use ZendSearch\Lucene\Analysis\Analyzer\Common\Utf8Num;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class AnalysisTest extends \PHPUnit_Framework_TestCase
+class AnalysisTest extends \PHPUnit\Framework\TestCase
 {
     public function testAnalyzer()
     {

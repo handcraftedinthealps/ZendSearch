@@ -20,7 +20,7 @@ use ZendSearch\Lucene\Storage\File;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class SegmentInfoTest extends \PHPUnit_Framework_TestCase
+class SegmentInfoTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {

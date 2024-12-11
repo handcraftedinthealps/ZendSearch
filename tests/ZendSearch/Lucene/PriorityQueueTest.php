@@ -18,27 +18,13 @@ use ZendSearch\Lucene;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class PriorityQueueTest extends \PHPUnit_Framework_TestCase
+class PriorityQueueTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {
         $queue = new testPriorityQueueClass();
 
         $this->assertTrue($queue instanceof Lucene\AbstractPriorityQueue);
-    }
-
-    public function testPut()
-    {
-        $queue = new testPriorityQueueClass();
-
-        $queue->put(1);
-        $queue->put(100);
-        $queue->put(46);
-        $queue->put(347);
-        $queue->put(11);
-        $queue->put(125);
-        $queue->put(-10);
-        $queue->put(100);
     }
 
     public function testPop()

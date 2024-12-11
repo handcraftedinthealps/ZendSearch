@@ -21,7 +21,7 @@ use ZendSearch\Lucene\Document;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class Search23Test extends \PHPUnit_Framework_TestCase
+class Search23Test extends \PHPUnit\Framework\TestCase
 {
     public function testQueryParser()
     {

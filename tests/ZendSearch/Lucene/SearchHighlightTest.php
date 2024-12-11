@@ -19,7 +19,7 @@ use ZendSearch\Lucene\Search;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class SearchHighlightTest extends \PHPUnit_Framework_TestCase
+class SearchHighlightTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Wildcard pattern minimum prefix
@@ -35,7 +35,7 @@ class SearchHighlightTest extends \PHPUnit_Framework_TestCase
      */
     protected $_defaultPrefixLength;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_wildcardMinPrefix = Query\Wildcard::getMinPrefixLength();
         Query\Wildcard::setMinPrefixLength(0);
@@ -44,7 +44,7 @@ class SearchHighlightTest extends \PHPUnit_Framework_TestCase
         Query\Fuzzy::setDefaultPrefixLength(0);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Query\Wildcard::setMinPrefixLength($this->_wildcardMinPrefix);
         Query\Fuzzy::setDefaultPrefixLength($this->_defaultPrefixLength);

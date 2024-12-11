@@ -18,7 +18,7 @@ use ZendSearch\Lucene\Index;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class FieldInfoTest extends \PHPUnit_Framework_TestCase
+class FieldInfoTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {
