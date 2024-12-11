@@ -18,7 +18,7 @@ use ZendSearch\Lucene\Storage\File;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class FileTest extends \PHPUnit_Framework_TestCase
+class FileTest extends \PHPUnit\Framework\TestCase
 {
     public function testFilesystem()
     {

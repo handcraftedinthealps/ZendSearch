@@ -19,7 +19,7 @@ use ZendSearch\Lucene;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class DocumentTest extends \PHPUnit_Framework_TestCase
+class DocumentTest extends \PHPUnit\Framework\TestCase
 {
 
     private function _clearDirectory($dirName)

@@ -19,7 +19,7 @@ use ZendSearch\Lucene\Storage\Directory;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class TermsPriorityQueueTest extends \PHPUnit_Framework_TestCase
+class TermsPriorityQueueTest extends \PHPUnit\Framework\TestCase
 {
     public function testQueue()
     {

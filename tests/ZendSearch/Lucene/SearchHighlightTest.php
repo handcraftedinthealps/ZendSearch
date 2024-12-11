@@ -19,7 +19,7 @@ use ZendSearch\Lucene\Search;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class SearchHighlightTest extends \PHPUnit_Framework_TestCase
+class SearchHighlightTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Wildcard pattern minimum prefix

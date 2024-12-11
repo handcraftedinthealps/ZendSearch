@@ -18,7 +18,7 @@ use ZendSearch\Lucene;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class PriorityQueueTest extends \PHPUnit_Framework_TestCase
+class PriorityQueueTest extends \PHPUnit\Framework\TestCase
 {
     public function testCreate()
     {

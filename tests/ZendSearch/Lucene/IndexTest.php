@@ -20,7 +20,7 @@ use ZendSearch\Lucene\Index;
  * @subpackage UnitTests
  * @group      Zend_Search_Lucene
  */
-class IndexTest extends \PHPUnit_Framework_TestCase
+class IndexTest extends \PHPUnit\Framework\TestCase
 {
     public function tearDown()
     {
