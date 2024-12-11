@@ -22,7 +22,7 @@ use ZendSearch\Lucene\Index;
  */
 class IndexTest extends \PHPUnit\Framework\TestCase
 {
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->_clearDirectory(__DIR__ . '/_index/_files');
     }
