@@ -915,7 +915,7 @@ class SegmentInfo implements TermsStreamInterface
      * @throws \ZendSearch\Lucene\Exception\InvalidArgumentException
      * @return array
      */
-    public function termDocs(Term $term, $shift = 0, DocsFilter $docsFilter = null)
+    public function termDocs(Term $term, $shift = 0, ?DocsFilter $docsFilter = null)
     {
         $termInfo = $this->getTermInfo($term);
 
@@ -1031,7 +1031,7 @@ class SegmentInfo implements TermsStreamInterface
      * @param \ZendSearch\Lucene\Index\DocsFilter|null $docsFilter
      * @return \ZendSearch\Lucene\Index\TermInfo
      */
-    public function termFreqs(Term $term, $shift = 0, DocsFilter $docsFilter = null)
+    public function termFreqs(Term $term, $shift = 0, ?DocsFilter $docsFilter = null)
     {
         $termInfo = $this->getTermInfo($term);
 
@@ -1151,7 +1151,7 @@ class SegmentInfo implements TermsStreamInterface
      * @param \ZendSearch\Lucene\Index\DocsFilter|null $docsFilter
      * @return \ZendSearch\Lucene\Index\TermInfo
      */
-    public function termPositions(Term $term, $shift = 0, DocsFilter $docsFilter = null)
+    public function termPositions(Term $term, $shift = 0, ?DocsFilter $docsFilter = null)
     {
         $termInfo = $this->getTermInfo($term);
 
