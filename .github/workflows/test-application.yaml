@@ -75,7 +75,7 @@ jobs:
 
             - name: Install phpunit
               run: |
-                  wget https://phar.phpunit.de/phpunit-5.phar -O phpunit.phar
+                  wget https://phar.phpunit.de/phpunit-8.phar -O phpunit.phar
                   chmod +x phpunit.phar
 
             - name: Run tests
