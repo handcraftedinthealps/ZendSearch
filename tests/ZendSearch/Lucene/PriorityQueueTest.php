@@ -27,20 +27,6 @@ class PriorityQueueTest extends \PHPUnit\Framework\TestCase
         $this->assertTrue($queue instanceof Lucene\AbstractPriorityQueue);
     }
 
-    public function testPut()
-    {
-        $queue = new testPriorityQueueClass();
-
-        $queue->put(1);
-        $queue->put(100);
-        $queue->put(46);
-        $queue->put(347);
-        $queue->put(11);
-        $queue->put(125);
-        $queue->put(-10);
-        $queue->put(100);
-    }
-
     public function testPop()
     {
         $queue = new testPriorityQueueClass();

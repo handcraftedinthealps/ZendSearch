@@ -42,6 +42,11 @@ class Phrase extends AbstractWeight
     private $_idf;
 
     /**
+     * @var float
+     */
+    private $_queryWeight;
+
+    /**
      * Zend_Search_Lucene_Search_Weight_Phrase constructor
      *
      * @param \ZendSearch\Lucene\Search\Query\Phrase $query
