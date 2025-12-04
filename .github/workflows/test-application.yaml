@@ -46,7 +46,7 @@ jobs:
 
         steps:
             - name: Checkout project
-              uses: actions/checkout@v2
+              uses: actions/checkout@v6
 
             - name: Install and configure PHP
               uses: shivammathur/setup-php@v2
@@ -60,7 +60,7 @@ jobs:
               run: echo "::set-output name=dir::$(composer config cache-files-dir)"
 
             - name: Cache dependencies
-              uses: actions/cache@v2
+              uses: actions/cache@v4
               id: composer-cache
               with:
                   path: ${{ steps.composer-cache-dir.outputs.dir }}
