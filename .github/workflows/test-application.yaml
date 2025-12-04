@@ -41,6 +41,9 @@ jobs:
                     - php-version: '8.4'
                       composer-flags: '--prefer-stable --prefer-dist --no-interaction'
 
+                    - php-version: '8.5'
+                      composer-flags: '--prefer-stable --prefer-dist --no-interaction'
+
         steps:
             - name: Checkout project
               uses: actions/checkout@v2
