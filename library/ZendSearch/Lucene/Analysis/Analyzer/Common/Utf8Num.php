@@ -63,7 +63,7 @@ class Utf8Num extends AbstractCommon
         // convert input into UTF-8
         if (strcasecmp($this->_encoding, 'utf8' ) != 0  &&
             strcasecmp($this->_encoding, 'utf-8') != 0 ) {
-                $this->_input = iconv($this->_encoding, 'UTF-8', $this->_input);
+                $this->_input = $this->_input ? iconv($this->_encoding, 'UTF-8', $this->_input) : $this->_input;
                 $this->_encoding = 'UTF-8';
         }
     }
@@ -112,4 +112,3 @@ class Utf8Num extends AbstractCommon
         return $token;
     }
 }
-
